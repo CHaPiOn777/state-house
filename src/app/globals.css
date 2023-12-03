@@ -10,7 +10,14 @@
   --green: #00ffff;
 
   --box-shadow: 0px 4px 16px 0px #00ffff40;
+  --bg-hover: linear-gradient(
+    91deg,
+    rgba(0, 255, 255, 0.2) 0%,
+    rgba(91, 104, 223, 0.2) 104.84%
+  );
   --border: linear-gradient(91.07deg, #00ffff 0%, #5b68df 104.84%);
+  --scale: scale(1.02)
+  --transition: all 0.2s cubic-bezier(0.42, 0, 0.58, 1);
 }
 
 * {

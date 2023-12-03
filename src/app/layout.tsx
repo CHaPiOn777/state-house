@@ -47,12 +47,12 @@ export default function RootLayout({
                   <Call />
                   8-999-858-14-78
                 </li>
-                <li className={styles.listItem}>
+                <li className={clsx(styles.listItem, styles.social)}>
                   <a href="#">
                     <WhatsApp />
                   </a>
                 </li>
-                <li className={styles.listItem}>
+                <li className={clsx(styles.listItem, styles.social)}>
                   <a href="#">
                     <Telegram />
                   </a>

@@ -4,67 +4,67 @@
   position: relative;
   z-index: 0;
 }
-
 .button {
-  position: relative;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* font-family: "NunitoSans"; */
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 24px;
-  letter-spacing: 0px;
-  text-align: center;
-
-  box-sizing: border-box;
   padding: 20px 32px;
-  color: var(--white);
   cursor: pointer;
-  user-select: none;
-  background-color: transparent;
-  border: none;
 
-  border: double 1em transparent;
-  border-radius: 30px;
-  background-image: linear-gradient(white, white),
-    linear-gradient(to right, green, gold);
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-  /* border: 1px solid; */
-  /* border-image-radius: 80px;
+  color: var(--white);
+  text-align: center;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px; /* 120% */
 
-  border-image-source: var(--border);
-  border-image-slice: 1; */
-
-  /* outline: none; */
-
-  /* svg {
-    width: 15px;
-    height: 15px;
-    margin-right: 8px;
-  } */
-
-  /* .button-spinner {
-    width: 20px;
-    height: 20px;
-  } */
-
-  /* 
-  &-default {
-    padding: 5px;
-    margin: 0;
-    background: none;
-    border: none;
-
-    svg {
-      width: 24px;
-      height: 24px;
-      margin-right: unset;
-    }
-  } */
+  background: transparent;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  border-radius: 8px;
+  border: 1px solid var(--green);
+  z-index: 2;
+  transition: var(--transition, all 0.2s cubic-bezier(0.42, 0, 0.58, 1));
+  transform: scale(1);
 }
+
+.button:hover {
+  opacity: 1;
+  background-color: transparent;
+  text-shadow: nthree;
+}
+
+.button:active {
+  transform: var(--scale, 1.02);
+}
+
+.button:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 100%;
+  width: 0px;
+  z-index: -1;
+  border-radius: 8px;
+  background: var(
+    --buttons-secondary-bg-hover,
+    linear-gradient(
+      91deg,
+      rgba(0, 255, 255, 0.2) 0%,
+      rgba(91, 104, 223, 0.2) 104.84%
+    )
+  );
+  transition: all 0.2s cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+.button:hover:before {
+  left: 0%;
+  right: auto;
+  width: 100%;
+}
+
 /* .button::before {
   content: "";
   position: absolute;
@@ -440,7 +440,7 @@
   }
 }
 
-.active {
+.button {
   color: $whiteColor;
   background: #36393f;
   svg path {
