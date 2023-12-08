@@ -60,17 +60,16 @@ export default function RootLayout({
               </ul>
               <Button type="transparent">Заказать звонок</Button>
             </div>
-            <div className={styles.bottomContainer}>
-              <menu className={styles.menu}>
-                <ul className={styles.listMenu}>
-                  <li className={styles.menuItem}>Каталог</li>
-                  <li className={styles.menuItem}>Наши работы</li>
-                  <li className={styles.menuItem}>Отзывы</li>
-                  <li className={styles.menuItem}>Оплата и доставка</li>
-                  <li className={styles.menuItem}>Контакты</li>
-                </ul>
-              </menu>
-            </div>
+
+            <menu className={styles.bottomContainer}>
+              <ul className={styles.listMenu}>
+                <li className={styles.menuItem}>Каталог</li>
+                <li className={styles.menuItem}>Наши работы</li>
+                <li className={styles.menuItem}>Отзывы</li>
+                <li className={styles.menuItem}>Оплата и доставка</li>
+                <li className={styles.menuItem}>Контакты</li>
+              </ul>
+            </menu>
           </div>
         </header>
         {children}

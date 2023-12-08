@@ -18,6 +18,7 @@ interface ButtonProps {
   disabled?: boolean;
   onClick?: (e: any) => void;
   isArrow?: boolean;
+  styleBtn?: string;
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -27,6 +28,7 @@ export const Button: React.FC<ButtonProps> = ({
   style,
   buttonType = "button",
   isArrow = false,
+  styleBtn,
 }: ButtonProps): ReactElement => {
   const cx = classNames.bind(styles);
   const className = cx(
@@ -35,7 +37,7 @@ export const Button: React.FC<ButtonProps> = ({
     style,
     nunitoSans.className
   );
-
+  console.log(`button-${type}`);
   const clickHandler = (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ): void => {
@@ -47,7 +49,7 @@ export const Button: React.FC<ButtonProps> = ({
   };
 
   return (
-    <div className={styles.btnWrapper}>
+    <div className={clsx(styles.btnWrapper, styleBtn)}>
       {isArrow ? <Arrow /> : null}
       <button
         type={buttonType}
