@@ -1,0 +1,184 @@
+@import "@radix-ui/colors/black-alpha.css";
+@import "@radix-ui/colors/green.css";
+@import "@radix-ui/colors/mauve.css";
+@import "@radix-ui/colors/violet.css";
+
+/* reset */
+button,
+fieldset,
+input {
+  all: unset;
+}
+
+.CheckboxRoot {
+  background-color: transparent;
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--Button-Primary-Text-Default);
+  cursor: pointer;
+}
+.CheckboxIndicator {
+  display: flex;
+}
+.Label {
+  color: var(--blackTextFields);
+  margin-left: 8px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+}
+.DialogOverlay {
+  background-color: var(--Main-BG);
+  position: fixed;
+  inset: 0;
+  animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.DialogContent {
+  box-shadow: 0px 30px 40px 0px rgba(37, 45, 53, 0.22);
+  background-color: var(--Main-BG_2);
+  background-image: url("../ui/img/Ellipse.png");
+  border-radius: 16px;
+  box-shadow: hsl(206 22% 7% / 35%) 0px 10px 38px -10px,
+    hsl(206 22% 7% / 20%) 0px 10px 20px -15px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  max-width: 674px;
+  width: 100%;
+  transform: translate(-50%, -50%);
+  padding: 30px 70px;
+  animation: contentShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+.DialogContent:before {
+  content: "";
+  background-image: url("../ui/img/Leaves_Right_1.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 423px;
+  height: 292px;
+  top: 0;
+  left: 0;
+  opacity: 0.7;
+  mix-blend-mode: color-dodge;
+  background-blend-mode: color-dodge;
+  pointer-events: none;
+}
+.DialogContent:after {
+  content: "";
+  background-image: url("../ui/img/Leaves_Right_2.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 423px;
+  height: 292px;
+  bottom: 0;
+  right: -124px;
+  opacity: 0.6;
+  z-index: -1;
+  mix-blend-mode: color-dodge;
+  background-blend-mode: color-dodge;
+  pointer-events: none;
+}
+.DialogContent:focus {
+  outline: none;
+}
+
+.DialogTitle {
+  color: var(--blackTextFields);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  text-align: center;
+}
+
+.DialogDescription {
+  margin-top: 24px;
+  color: var(--blackTextFields);
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  text-align: center;
+}
+
+.Buttons {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+}
+.Button {
+  width: 100%;
+  color: var(--Button-Primary-Text-Default);
+}
+
+.IconButton {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  padding: 10px;
+  transition: all 0.2s cubic-bezier(0.42, 0, 0.58, 1);
+}
+.IconButton:hover {
+  opacity: 0.6;
+}
+
+.Fieldset {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: flex-start;
+  margin-bottom: 15px;
+}
+
+.Input {
+  box-sizing: border-box;
+  width: 100%;
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  border: 2px solid var(--border-input);
+  background: var(--Fields-BG-Default);
+  padding: 16px 20px;
+  font-size: 15px;
+  line-height: 1;
+}
+.Input:focus {
+  border: 2px solid transparent;
+  box-shadow: 0 0 0 2px var(--green-border);
+}
+.InputStrles {
+  width: 100px;
+  height: 100px;
+}
+@keyframes overlayShow {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes contentShow {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}

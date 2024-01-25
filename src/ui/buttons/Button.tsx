@@ -8,7 +8,7 @@ import { Nunito_Sans } from "next/font/google";
 const nunitoSans = Nunito_Sans({
   subsets: ["latin"],
 });
-type ButtonType = "transparent" | "default";
+type ButtonType = "transparent" | "default" | "formTransparent" | "formDefault";
 
 interface ButtonProps {
   type: ButtonType;
@@ -21,43 +21,50 @@ interface ButtonProps {
   styleBtn?: string;
 }
 
-export const Button: React.FC<ButtonProps> = ({
-  type,
-  children,
-  onClick,
-  style,
-  buttonType = "button",
-  isArrow = false,
-  styleBtn,
-}: ButtonProps): ReactElement => {
-  const cx = classNames.bind(styles);
-  const className = cx(
-    "button",
-    { [`button-${type}`]: type },
-    style,
-    nunitoSans.className
-  );
-  console.log(`button-${type}`);
-  const clickHandler = (
-    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
-  ): void => {
-    if (onClick) {
-      event.preventDefault();
-      event.stopPropagation();
-      onClick(event);
-    }
-  };
+export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+  (
+    {
+      type,
+      children,
+      onClick,
+      style,
+      buttonType = "button",
+      isArrow = false,
+      styleBtn,
+    },
+    ref
+  ) => {
+    const cx = classNames.bind(styles);
+    const className = cx(
+      "button",
+      { [`button-${type}`]: type },
+      style,
+      nunitoSans.className
+    );
 
-  return (
-    <div className={clsx(styles.btnWrapper, styleBtn)}>
-      {isArrow ? <Arrow /> : null}
-      <button
-        type={buttonType}
-        className={clsx(className)}
-        // onClick={clickHandler}
-      >
-        {children}
-      </button>
-    </div>
-  );
-};
+    const clickHandler = (
+      event: React.MouseEvent<HTMLButtonElement, MouseEvent>
+    ): void => {
+      if (onClick) {
+        event.preventDefault();
+        event.stopPropagation();
+        onClick(event);
+      }
+    };
+
+    return (
+      <div className={clsx(styles.btnWrapper, styleBtn)}>
+        {isArrow ? <Arrow /> : null}
+        <button
+          ref={ref}
+          // type={'button'}
+          className={clsx(className)}
+          onClick={onClick}
+        >
+          {children}
+        </button>
+      </div>
+    );
+  }
+);
+Button.displayName = "Button";

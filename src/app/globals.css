@@ -5,10 +5,16 @@
   --padding-btn: 20px 32px;
   --font-mono: NunitoSans, monospace;
 
-  --black: #1c2024;
+  --Button-Primary-Text-Default: #1c2024;
+  --blackTextFields: #313131;
+  --Main-BG_2: #E9F3FF;
+  --Main-BG: #00001450;
+  --Fields-BG-Default: rgba(209, 217, 227, 0.40);
   --white: #dff7fc;
   --green: #00ffff;
   --green-border: #00ffff80;
+  --green-border-modal: #06daea;
+  --border-input: rgba(185, 198, 214, 0.40);
 
   --box-shadow: 0px 4px 16px 0px #00ffff40;
   --bg-hover: linear-gradient(
