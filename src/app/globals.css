@@ -12,6 +12,7 @@
   --Fields-BG-Default: rgba(209, 217, 227, 0.40);
   --white: #dff7fc;
   --green: #00ffff;
+  --descColor:#99CBC5;
   --green-border: #00ffff80;
   --green-border-modal: #06daea;
   --border-input: rgba(185, 198, 214, 0.40);
@@ -22,8 +23,9 @@
     rgba(0, 255, 255, 0.2) 0%,
     rgba(91, 104, 223, 0.2) 104.84%
   );
+  
   --border: linear-gradient(91.07deg, #00ffff 0%, #5b68df 104.84%);
-  --scale: scale(1.02)
+  --scale: scale(1.01)
   --transition: all 0.2s cubic-bezier(0.42, 0, 0.58, 1);
 }
 
@@ -33,15 +35,39 @@
   margin: 0;
 }
 
+body {
+  background-color: #000014;
+  z-index: -10;
+  position: relative;
+  scrollbar-width: none;
+  will-change: scroll-position;
+  scroll-behavior: smooth;
+}
+body::after {
+  content: '';
+  background: url('../img/projects/image.png') no-repeat;
+  background-size: cover;
+  filter: blur(5px);
+  opacity: .9;
+  z-index: -9;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+}
+::-webkit-scrollbar {
+  display: none; /* Скрывает скроллбар */
+}
 html,
 body {
+  color: var(--white);
+  height: 100%;
   max-width: 100vw;
   overflow-x: hidden;
 }
 
-body {
-  background-color: #000014;
-}
 
 a {
   color: inherit;
@@ -54,4 +80,30 @@ ul {
 .container {
   max-width: var(--width-container);
   margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.containerSectionRow {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  flex-direction: row;
+  margin: 140px 100px 0px;
+}
+.containerSectionColumn {
+  display: flex;
+  margin: auto;
+  width: 100%;
+  flex-direction: column;
+  margin: 140px 100px 0px;
+}
+.swiper {
+  margin-top: 80px;
+  overflow: hidden;
+  display: flex;
+  will-change: transform, transition;
+}
+.swiper-wrapper {
+  display: flex;
+  width: 100%;
 }

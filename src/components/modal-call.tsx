@@ -1,13 +1,11 @@
-import React from "react";
+import React, { ReactElement } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
-import { Cross2Icon } from "@radix-ui/react-icons";
 import "./styles.css";
 import CheckboxModal from "./checkbox";
 import { Button } from "@/ui/buttons/Button";
 import { CloseIcon } from "@/ui/icons/CloseIcon";
 
-const ModalCall = ({ children }) => {
-  console.log(children);
+const ModalCall = ({ children }: { children: ReactElement }) => {
   return (
     <Dialog.Root>
       <Dialog.Trigger asChild>{children}</Dialog.Trigger>

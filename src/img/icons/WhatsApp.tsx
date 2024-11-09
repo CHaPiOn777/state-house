@@ -44,8 +44,8 @@ const WhatsApp = () => {
           y2="0.65499"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#20B038" />
-          <stop offset="1" stop-color="#60D66A" />
+          <stop stopColor="#20B038" />
+          <stop offset="1" stopColor="#60D66A" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_504_8216"
@@ -55,8 +55,8 @@ const WhatsApp = () => {
           y2="7.66967"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#20B038" />
-          <stop offset="1" stop-color="#60D66A" />
+          <stop stopColor="#20B038" />
+          <stop offset="1" stopColor="#60D66A" />
         </linearGradient>
         <linearGradient
           id="paint2_linear_504_8216"
@@ -66,8 +66,8 @@ const WhatsApp = () => {
           y2="7.2915"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F9F9F9" />
-          <stop offset="1" stop-color="white" />
+          <stop stopColor="#F9F9F9" />
+          <stop offset="1" stopColor="white" />
         </linearGradient>
       </defs>
     </svg>

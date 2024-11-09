@@ -1,0 +1,22 @@
+.cardList {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 64px;
+}
+.sectionMyPage {
+  position: relative;
+}
+.sectionMyPage::before {
+  position: absolute;
+  content: "";
+  top: -117px;
+  left: -102px;
+  z-index: -2;
+  opacity: 0.8;
+  width: 120%;
+  height: 123%;
+  background-color: #000014;
+  filter: blur(200px);
+}
