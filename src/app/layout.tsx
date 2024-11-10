@@ -11,6 +11,7 @@ import Telegram from "@/img/icons/Telegram";
 import { Button } from "@/ui/buttons/Button";
 import Clock from "@/img/icons/Clock";
 import Call from "@/img/icons/Call";
+import Footer from "@/app/(Footer)/Footer";
 
 const nunitoSans = Nunito_Sans({
   subsets: ["latin"],
@@ -63,16 +64,24 @@ export default function RootLayout({
 
             <menu className={styles.bottomContainer}>
               <ul className={styles.listMenu}>
-                <li className={styles.menuItem}>Каталог</li>
-                <li className={styles.menuItem}>Наши работы</li>
-                <li className={styles.menuItem}>Отзывы</li>
-                <li className={styles.menuItem}>Оплата и доставка</li>
-                <li className={styles.menuItem}>Контакты</li>
+                <li className={styles.menuItem}>
+                  <a href="#catalog"> Каталог</a>
+                </li>
+                <li className={styles.menuItem}>
+                  <a href="#reviews"> Отзывы</a>
+                </li>
+                <li className={styles.menuItem}>
+                  <a href="#price"> Оплата и доставка</a>
+                </li>
+                <li className={styles.menuItem}>
+                  <a href="#contacts"> Контакты</a>
+                </li>
               </ul>
             </menu>
           </div>
         </header>
         {children}
+        <Footer />
       </body>
     </html>
   );

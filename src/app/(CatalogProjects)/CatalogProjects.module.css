@@ -8,8 +8,9 @@
   /* background: url("../../img/projects/bgProj.png"); */
   position: absolute;
   top: -194px;
-  left: -152px;
+  left: -123px;
   z-index: -1;
+  filter: blur(2px);
   width: 100vw;
   /* width: 200%; */
 }
@@ -88,4 +89,16 @@
 
 .desc {
   color: var(--white);
+}
+.swiper {
+  margin-top: 80px;
+  overflow: hidden;
+  display: flex;
+  width: 100%;
+  will-change: transform, transition;
+  position: relative;
+}
+.swiper > div {
+  display: flex;
+  width: 100%;
 }

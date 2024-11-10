@@ -89,9 +89,9 @@ const DividerLeft = () => {
           width="103"
           height="52"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feBlend
             mode="normal"
             in="SourceGraphic"
@@ -111,8 +111,8 @@ const DividerLeft = () => {
           y2="29.1875"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#00FFFF" />
-          <stop offset="1" stop-color="#00D1FF" />
+          <stop stopColor="#00FFFF" />
+          <stop offset="1" stopColor="#00D1FF" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_674_1786"
@@ -122,8 +122,8 @@ const DividerLeft = () => {
           y2="32.1875"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#00FFFF" />
-          <stop offset="1" stop-color="#00D1FF" />
+          <stop stopColor="#00FFFF" />
+          <stop offset="1" stopColor="#00D1FF" />
         </linearGradient>
         <linearGradient
           id="paint2_linear_674_1786"
@@ -133,8 +133,8 @@ const DividerLeft = () => {
           y2="22.1875"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#00FFFF" />
-          <stop offset="1" stop-color="#00D1FF" />
+          <stop stopColor="#00FFFF" />
+          <stop offset="1" stopColor="#00D1FF" />
         </linearGradient>
         <linearGradient
           id="paint3_linear_674_1786"
@@ -144,8 +144,8 @@ const DividerLeft = () => {
           y2="26.1875"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#00FFFF" />
-          <stop offset="1" stop-color="#00D1FF" />
+          <stop stopColor="#00FFFF" />
+          <stop offset="1" stopColor="#00D1FF" />
         </linearGradient>
         <linearGradient
           id="paint4_linear_674_1786"
@@ -155,8 +155,8 @@ const DividerLeft = () => {
           y2="26.1875"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#00FFFF" />
-          <stop offset="1" stop-color="#00D1FF" />
+          <stop stopColor="#00FFFF" />
+          <stop offset="1" stopColor="#00D1FF" />
         </linearGradient>
         <linearGradient
           id="paint5_linear_674_1786"
@@ -166,8 +166,8 @@ const DividerLeft = () => {
           y2="29.1875"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#00FFFF" />
-          <stop offset="1" stop-color="#00D1FF" />
+          <stop stopColor="#00FFFF" />
+          <stop offset="1" stopColor="#00D1FF" />
         </linearGradient>
         <linearGradient
           id="paint6_linear_674_1786"
@@ -177,8 +177,8 @@ const DividerLeft = () => {
           y2="32.1875"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#00FFFF" />
-          <stop offset="1" stop-color="#00D1FF" />
+          <stop stopColor="#00FFFF" />
+          <stop offset="1" stopColor="#00D1FF" />
         </linearGradient>
         <linearGradient
           id="paint7_linear_674_1786"
@@ -188,8 +188,8 @@ const DividerLeft = () => {
           y2="22.1875"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#00FFFF" />
-          <stop offset="1" stop-color="#00D1FF" />
+          <stop stopColor="#00FFFF" />
+          <stop offset="1" stopColor="#00D1FF" />
         </linearGradient>
         <linearGradient
           id="paint8_linear_674_1786"
@@ -199,8 +199,8 @@ const DividerLeft = () => {
           y2="26.1875"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#00FFFF" />
-          <stop offset="1" stop-color="#00D1FF" />
+          <stop stopColor="#00FFFF" />
+          <stop offset="1" stopColor="#00D1FF" />
         </linearGradient>
         <linearGradient
           id="paint9_linear_674_1786"
@@ -210,8 +210,8 @@ const DividerLeft = () => {
           y2="26.1875"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#00FFFF" />
-          <stop offset="1" stop-color="#00D1FF" />
+          <stop stopColor="#00FFFF" />
+          <stop offset="1" stopColor="#00D1FF" />
         </linearGradient>
       </defs>
     </svg>

@@ -57,13 +57,17 @@ const CatalogProjects = () => {
     return new Intl.NumberFormat("ru-RU").format(num);
   }
   return (
-    <section className={clsx("containerSectionColumn", styles.projects)}>
+    <section
+      id="catalog"
+      className={clsx("containerSectionColumn", styles.projects)}
+    >
       <Title title={`ПРОЕКТЫ ДОМОВ И ЦЕНЫ НА СТРОИТЕЛЬСТВО`} />
       <Swiper
         slidesPerView={"auto"}
         slidesPerGroup={1}
         centeredSlides
         loop
+        className={styles.swiper}
         slidesOffsetBefore={20}
         grabCursor={true}
       >
