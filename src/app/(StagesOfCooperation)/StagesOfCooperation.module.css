@@ -18,14 +18,13 @@
 .list::after {
   content: "";
   position: absolute;
-  left: 0;
+  left: 30px;
   top: 30%;
   height: 1px;
-  width: 100%;
+  width: 90%;
   border-top: 1px dashed var(--green);
 }
 .listItem {
-  background: #000014;
   overflow: hidden;
   z-index: 1;
   display: flex;

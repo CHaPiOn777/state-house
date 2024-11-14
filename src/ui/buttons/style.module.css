@@ -234,3 +234,55 @@
 
   transform: scale(1, 1);
 }
+
+.burger {
+  cursor: pointer;
+  width: 40px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.line {
+  height: 4px;
+  background-color: var(--green);
+  transition: all 0.15s ease;
+  transform-origin: center;
+}
+
+.burger.open .line:nth-child(1) {
+  transform: rotate(-45deg) translateY(18px);
+}
+
+.burger.open .line:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.open .line:nth-child(3) {
+  transform: rotate(45deg) translateY(-19px);
+}
+
+.sidebar {
+  position: fixed;
+  top: 50px;
+  right: -330px; /* Начальное положение за пределами экрана */
+  width: 329px;
+  height: 100%;
+  background-color: #def4ff; /* Задайте цвет фона */
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  transition: right 0.3s ease; /* Плавный переход */
+  z-index: 5; /* Под бургером */
+}
+
+.sidebar.open {
+  right: 0; /* Панель выдвигается на экран */
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  color: #042372;
+  font-weight: 700;
+  padding: 50px 32px;
+}

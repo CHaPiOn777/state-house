@@ -1,10 +1,10 @@
 import React from "react";
 
-const Telegram = () => {
+const Telegram = ({ size }: { size: number }) => {
   return (
     <svg
-      width="37"
-      height="37"
+      width={size}
+      height={size}
       viewBox="0 0 37 37"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

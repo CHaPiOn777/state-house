@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import styles from "./Footer.module.css";
-import logo from "../../img/logo.svg";
+import logo from "../../img/Logo.png";
 import Image from "next/image";
 import ModalCall from "@/components/modal-call";
 import { Button } from "@/ui/buttons/Button";

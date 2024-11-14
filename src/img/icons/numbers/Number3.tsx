@@ -16,8 +16,8 @@ const Number3 = () => {
               cx="45.6992"
               cy="42.6592"
               r="32"
-              fill="white"
-              fillOpacity="0.05"
+              fill="#0F152A"
+              fillOpacity="1"
             />
             <circle
               cx="45.6992"

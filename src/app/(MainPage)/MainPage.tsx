@@ -3,18 +3,30 @@ import Image from "next/image";
 import React, { useState } from "react";
 import styles from "../page.module.css";
 import bg from "../../img/Main.png";
+import bgMobile from "../../img/bgMobile.png";
 import ModalCall from "@/components/modal-call";
 import { Button } from "@/ui/buttons/Button";
+import useWindowSize from "@/hooks/useWindowSize";
 
 const MainPage = () => {
-  const [active, setActive] = useState<boolean>(false);
-
+  const { width } = useWindowSize();
+  const size: Record<string, Record<"width", number>> = {
+    small: {
+      width: 520,
+    },
+    medium: {
+      width: 1124,
+    },
+    large: {
+      width: 1440,
+    },
+  };
   return (
     <section className={styles.section}>
       <Image
         src={bg}
-        width={1440}
-        height={950}
+        width={size[width].width}
+        // height={'auto'}
         alt="Фон"
         className={styles.bg}
       />
@@ -24,11 +36,7 @@ const MainPage = () => {
         по&nbsp;современным технологиям в&nbsp;Москве и&nbsp;московской области
       </p>
       <ModalCall>
-        <Button
-          type="default"
-          styleBtn={styles.button}
-          onClick={() => setActive(true)}
-        >
+        <Button type="default" styleBtn={styles.button}>
           Рассчитать стоимость
         </Button>
       </ModalCall>
