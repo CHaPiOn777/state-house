@@ -22,7 +22,7 @@ const ListNumber = () => {
       </li>
       <li className={clsx(styles.listItem, styles.social)}>
         <a
-          href="https://wa.me/89998581478"
+          href="https://wa.me/79998581478"
           className={styles.linkItem}
           target="_blank"
           rel="noopener noreferrer"

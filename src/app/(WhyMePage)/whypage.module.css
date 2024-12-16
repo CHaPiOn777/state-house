@@ -17,6 +17,7 @@
   .cardList {
     grid-template-rows: 1fr;
     gap: 24px;
+    gap: 24px;
     height: max-content;
     grid-template-columns: 344px;
   }

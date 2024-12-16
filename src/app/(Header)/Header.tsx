@@ -37,7 +37,14 @@ const Header = () => {
             )}
           </div>
           {width === "large" && <ListNumber />}
-          <div style={{ display: "flex", gap: "24px", alignItems: "center" }}>
+          <div
+            style={{
+              display: "flex",
+              gap: "24px",
+              alignItems: "center",
+              padding: "5px",
+            }}
+          >
             {width !== "small" && (
               <ModalCall>
                 <Button type="transparent">Заказать звонок</Button>
