@@ -68,7 +68,7 @@
   justify-content: space-between;
   align-items: flex-end;
 }
-@media (max-width: 520px) {
+@media (max-width: 768px) {
   .footer {
     height: auto;
     flex-direction: column;
@@ -89,5 +89,8 @@
   }
   .listRight {
     align-items: flex-start;
+  }
+  .text {
+    width: 80vw;
   }
 }

@@ -72,3 +72,8 @@
     height: 110px;
   }
 }
+@media (max-width: 520px) {
+  .card {
+    width: calc(100vw - 60px);
+  }
+}

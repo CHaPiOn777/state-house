@@ -141,7 +141,7 @@ ul {
 .swiper-pagination{
   display: flex;
   gap: 8px;
-  width: clamp(1440px, 90vw, 100%);
+  width:90vw;
   align-items: center;
   margin-top: 10px;
   justify-content: center;

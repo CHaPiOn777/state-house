@@ -56,7 +56,7 @@ const Footer = () => {
             2019-2023 © «Status House» Политика конфиденциальности, не является
             пуличной офертой
           </p>
-          {width !== "small" && (
+          {width === "large" && (
             <ModalCall>
               <Button type="transparent" styleBtn={styles.button}>
                 Рассчитать стоимость
