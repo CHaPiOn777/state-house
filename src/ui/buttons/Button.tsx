@@ -57,7 +57,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         {isArrow ? <Arrow /> : null}
         <button
           ref={ref}
-          // type={'button'}
+          type={buttonType}
           className={clsx(className)}
           onClick={onClick}
         >

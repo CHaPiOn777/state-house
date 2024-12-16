@@ -45,13 +45,7 @@ const ProjectCard = ({
           <h3 className={styles.title}>{title}</h3>
           <p className={styles.price}>от {price} руб.</p>
         </div>
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "end",
-          }}
-        >
+        <div className={styles.buttonBlock}>
           <ul className={styles.descBlock}>
             {objDesc.map(({ title, desc }, index) => (
               <li key={index}>

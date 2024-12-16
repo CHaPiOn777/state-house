@@ -5,8 +5,11 @@ import logo from "../../img/Logo.png";
 import Image from "next/image";
 import ModalCall from "@/components/modal-call";
 import { Button } from "@/ui/buttons/Button";
+import useWindowSize from "@/hooks/useWindowSize";
 
 const Footer = () => {
+  const { width } = useWindowSize();
+
   return (
     <footer id="contacts" className={styles.footer}>
       <div className={styles.section}>
@@ -22,9 +25,15 @@ const Footer = () => {
               <li className={`${styles.text} ${styles.textStyles}`}>
                 О компании
               </li>
-              <li className={styles.text}>Каталог</li>
-              <li className={styles.text}>Оплата и досавка</li>
-              <li className={styles.text}>Отзывы</li>
+              <li className={styles.text}>
+                <a href="#catalog"> Каталог</a>
+              </li>
+              <li className={styles.text}>
+                <a href="#price"> Оплата и доставка</a>
+              </li>
+              <li className={styles.text}>
+                <a href="#reviews"> Отзывы</a>
+              </li>
             </ul>
             <ul className={`${styles.list} ${styles.listRight}`}>
               <li className={`${styles.text} ${styles.textStyles}`}>
@@ -47,11 +56,13 @@ const Footer = () => {
             2019-2023 © «Status House» Политика конфиденциальности, не является
             пуличной офертой
           </p>
-          <ModalCall>
-            <Button type="transparent" styleBtn={styles.button}>
-              Рассчитать стоимость
-            </Button>
-          </ModalCall>
+          {width !== "small" && (
+            <ModalCall>
+              <Button type="transparent" styleBtn={styles.button}>
+                Рассчитать стоимость
+              </Button>
+            </ModalCall>
+          )}
         </div>
       </div>
     </footer>

@@ -31,10 +31,13 @@ const MainPage = () => {
         className={styles.bg}
       />
       <h1 className={styles.title}>СТРОИТЕЛЬСТВО ЖИЛЫХ&nbsp;ДОМОВ</h1>
-      <p className={styles.subtitle}>
-        Построим дом под ключ быстро, качественно и&nbsp;только
-        по&nbsp;современным технологиям в&nbsp;Москве и&nbsp;московской области
-      </p>
+      {width !== "small" && (
+        <p className={styles.subtitle}>
+          Построим дом под ключ быстро, качественно и&nbsp;только
+          по&nbsp;современным технологиям в&nbsp;Москве и&nbsp;московской
+          области
+        </p>
+      )}
       <ModalCall>
         <Button type="default" styleBtn={styles.button}>
           Рассчитать стоимость

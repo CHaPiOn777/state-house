@@ -1,6 +1,6 @@
 .projects {
   position: relative;
-  padding-bottom: 140px;
+  padding-bottom: 40px;
   /* overflow: hidden; */
 }
 .projects::before {
@@ -24,11 +24,14 @@
   align-items: center;
   width: 392px;
   justify-content: space-between;
+  max-width: 586px;
   min-width: 586px;
-  max-width: 464px;
+
+  width: 100%;
 }
+
 .imgBlock {
-  width: 538px;
+  width: 100%;
   height: 270px;
   border-radius: 16px;
   overflow: hidden;
@@ -94,6 +97,7 @@
   margin-top: 80px;
   overflow: hidden;
   display: flex;
+  flex-direction: column;
   width: 100%;
   will-change: transform, transition;
   position: relative;
@@ -101,4 +105,29 @@
 .swiper > div {
   display: flex;
   width: 100%;
+}
+.swiper > div:nth-child(2) {
+  margin-top: 25px;
+}
+.buttonBlock {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+@media (max-width: 520px) {
+  .card {
+    max-width: calc(100vw - 50px);
+    min-width: calc(100vw - 50px);
+  }
+  .titlesBlock {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .buttonBlock {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .button > button {
+    width: calc(100vw - 100px) !important;
+  }
 }

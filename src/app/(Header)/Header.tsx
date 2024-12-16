@@ -10,6 +10,7 @@ import BurgerMenu from "@/ui/buttons/BurgerMenu";
 import useWindowSize from "@/hooks/useWindowSize";
 import Menu from "@/app/(Header)/Menu";
 import ListNumber from "@/app/(Header)/ListNumber";
+import ModalCall from "@/components/modal-call";
 const Header = () => {
   const { width } = useWindowSize();
   const size: Record<string, Record<"width", number>> = {
@@ -38,7 +39,9 @@ const Header = () => {
           {width === "large" && <ListNumber />}
           <div style={{ display: "flex", gap: "24px", alignItems: "center" }}>
             {width !== "small" && (
-              <Button type="transparent">Заказать звонок</Button>
+              <ModalCall>
+                <Button type="transparent">Заказать звонок</Button>
+              </ModalCall>
             )}
             {width !== "large" && <BurgerMenu />}
           </div>

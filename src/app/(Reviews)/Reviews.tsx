@@ -12,7 +12,10 @@ import denis from "../../img/reviews/denis.png";
 import Quotes from "@/img/icons/quotes";
 import AvatarName from "@/ui/avatarName/AvatarName";
 import { Swiper, SwiperSlide } from "swiper/react";
+import useWindowSize from "@/hooks/useWindowSize";
 const Reviews = () => {
+  const { width } = useWindowSize();
+
   const data = [
     {
       text: "Алексея посоветовали знакомые. Приятно удивлен профессионализмом и отношением к работе. Пока заказывал каркас под крышу на 150 м2. Всем доволен, надеюсь по весне они же будут доделывать дом. Рад знакомству!",
@@ -73,7 +76,7 @@ const Reviews = () => {
       </p>
       <Swiper
         slidesPerView={"auto"}
-        slidesPerGroup={2}
+        slidesPerGroup={width === "small" ? 1 : 2}
         spaceBetween={15}
         loop
         // className={styles.list}

@@ -16,6 +16,9 @@
 .list {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 48px;
+  justify-content: center;
 }
 .listItem {
   display: flex;
@@ -24,6 +27,20 @@
   align-items: center;
   width: 264px;
   color: #ffffff;
+}
+@media (max-width: 1024px) {
+  .listItem {
+    flex: 1 1 calc(50% - 48px); /* Два элемента в строке */
+    max-width: calc(50% - 48px); /* Устанавливаем ширину для двух элементов */
+    box-sizing: border-box; /* Учитываем отступы */
+  }
+}
+@media (max-width: 520px) {
+  .listItem {
+    flex: 1 1 100%;
+    max-width: 100%; /* Устанавливаем ширину для двух элементов */
+    box-sizing: border-box; /* Учитываем отступы */
+  }
 }
 .titleItem {
   font-size: 18px;

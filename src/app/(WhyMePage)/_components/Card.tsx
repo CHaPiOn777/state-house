@@ -16,7 +16,11 @@ const Card = ({
 }) => {
   return (
     <li className={clsx(styles.card, isVerical ? styles.cardV : styles.cardH)}>
-      <Image className={styles.img} src={img} alt={title} />
+      <Image
+        className={clsx(styles.img, isVerical ? styles.imgV : styles.imgH)}
+        src={img}
+        alt={title}
+      />
       <div className={styles.textBlock}>
         <h3 className={styles.title}>{title}</h3>
         <p className={styles.desc}>{desc}</p>

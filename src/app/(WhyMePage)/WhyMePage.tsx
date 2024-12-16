@@ -10,14 +10,19 @@ import styles from "./whypage.module.css";
 import Card from "@/app/(WhyMePage)/_components/Card";
 import clsx from "clsx";
 import Title from "@/components/title";
+import useWindowSize from "@/hooks/useWindowSize";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
 const WhyMePage = () => {
+  const { width } = useWindowSize();
+
   const data = [
     {
       id: 1,
       img: smeta,
       title: "УТВЕРЖДЕННАЯ СМЕТА",
       desc: "Ведём объект от начала и до конца согласно договора. Ни каких скрытых платежей, только подробная смета",
-      isVerical: true,
+      isVerical: width === "large" ? true : false,
     },
     {
       id: 2,
@@ -51,17 +56,36 @@ const WhyMePage = () => {
   return (
     <section className={clsx("containerSectionColumn", styles.sectionMyPage)}>
       <Title title={`ПОЧЕМУ СТОИТ ОБРАТИТЬСЯ К НАМ`} />
-      <ul className={styles.cardList}>
-        {data.map(({ id, img, title, desc, isVerical }) => (
-          <Card
-            isVerical={isVerical}
-            key={id}
-            img={img}
-            title={title}
-            desc={desc}
-          />
-        ))}
-      </ul>
+      {width === "large" ? (
+        <ul className={styles.cardList}>
+          {data.map(({ id, img, title, desc, isVerical }) => (
+            <Card
+              isVerical={isVerical}
+              key={id}
+              img={img}
+              title={title}
+              desc={desc}
+            />
+          ))}
+        </ul>
+      ) : (
+        <Swiper
+          spaceBetween={"20px"}
+          slidesPerView={"auto"}
+          slidesPerGroup={1}
+          slidesOffsetBefore={20}
+          grabCursor={true}
+          modules={[Pagination]}
+          pagination={{ clickable: true }}
+          className={styles.cardList}
+        >
+          {data.map(({ id, img, title, desc, isVerical }) => (
+            <SwiperSlide key={id}>
+              <Card isVerical={isVerical} img={img} title={title} desc={desc} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      )}
     </section>
   );
 };

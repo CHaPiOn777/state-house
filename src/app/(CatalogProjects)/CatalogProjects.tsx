@@ -10,6 +10,8 @@ import house3 from "../../img/projects/3.png";
 import house4 from "../../img/projects/4.png";
 import house5 from "../../img/projects/5.png";
 import ProjectCard from "@/app/(CatalogProjects)/_components/ProjectCard";
+import { Pagination } from "swiper/modules";
+import useWindowSize from "@/hooks/useWindowSize";
 const CatalogProjects = () => {
   const projects = [
     {
@@ -56,6 +58,8 @@ const CatalogProjects = () => {
   function formatNumber(num: number) {
     return new Intl.NumberFormat("ru-RU").format(num);
   }
+  const { width } = useWindowSize();
+
   return (
     <section
       id="catalog"
@@ -68,8 +72,12 @@ const CatalogProjects = () => {
         centeredSlides
         loop
         className={styles.swiper}
-        slidesOffsetBefore={20}
+        slidesOffsetBefore={
+          width === "large" ? 20 : width === "small" ? 0 : -20
+        }
         grabCursor={true}
+        modules={[Pagination]}
+        pagination={{ clickable: true }}
       >
         {projects.map(
           ({ title, img, price, square, floors, bedrooms }, index) => (

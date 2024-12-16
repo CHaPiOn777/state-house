@@ -23,8 +23,10 @@ input {
 }
 .CheckboxIndicator {
   display: flex;
+  color: var(--blackTextFields);
 }
 .Label {
+  cursor: pointer;
   color: var(--blackTextFields);
   margin-left: 8px;
   font-size: 16px;
@@ -90,6 +92,7 @@ input {
 }
 
 .DialogTitle {
+  margin-bottom: 25px;
   color: var(--blackTextFields);
   font-size: 32px;
   font-style: normal;
@@ -141,8 +144,11 @@ input {
   align-items: flex-start;
   margin-bottom: 15px;
 }
-
+.Error {
+  color: red;
+}
 .Input {
+  color: var(--blackTextFields);
   box-sizing: border-box;
   width: 100%;
   flex: 1;
@@ -151,7 +157,7 @@ input {
   justify-content: center;
   border-radius: 4px;
   border: 2px solid var(--border-input);
-  background: var(--Fields-BG-Default);
+  background: transparent;
   padding: 16px 20px;
   font-size: 15px;
   line-height: 1;

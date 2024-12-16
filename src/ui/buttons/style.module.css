@@ -16,6 +16,16 @@
   line-height: 24px; /* 120% */
   position: relative;
 }
+
+@media (max-width: 520px) {
+  .button {
+    font-size: 18px;
+    padding: 16px 0;
+    display: inline-block;
+    width: calc(100vw - 40px);
+  }
+}
+
 .button:active {
   transform: scale(1.05);
 }
@@ -237,8 +247,8 @@
 
 .burger {
   cursor: pointer;
-  width: 40px;
-  height: 30px;
+  width: 30px;
+  height: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -246,14 +256,14 @@
 }
 
 .line {
-  height: 4px;
+  height: 2px;
   background-color: var(--green);
   transition: all 0.15s ease;
   transform-origin: center;
 }
 
 .burger.open .line:nth-child(1) {
-  transform: rotate(-45deg) translateY(18px);
+  transform: rotate(-45deg) translateY(13px);
 }
 
 .burger.open .line:nth-child(2) {
@@ -261,18 +271,18 @@
 }
 
 .burger.open .line:nth-child(3) {
-  transform: rotate(45deg) translateY(-19px);
+  transform: rotate(45deg) translateY(-13px);
 }
 
 .sidebar {
   position: fixed;
-  top: 50px;
+  top: 0px;
   right: -330px; /* Начальное положение за пределами экрана */
   width: 329px;
   height: 100%;
   background-color: #def4ff; /* Задайте цвет фона */
   box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-  transition: right 0.3s ease; /* Плавный переход */
+  transition: right 0.1s ease; /* Плавный переход */
   z-index: 5; /* Под бургером */
 }
 

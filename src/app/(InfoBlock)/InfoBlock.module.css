@@ -21,6 +21,7 @@
   display: flex;
   margin: auto;
 }
+
 .img {
   /* width: 100%; */
   /* position: absolute; */
@@ -66,4 +67,15 @@
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
+}
+@media (max-width: 1024px) {
+  .container {
+    flex-direction: column;
+  }
+  .textContainer {
+    color: var(--white);
+    width: 100%;
+    padding: 25px;
+    margin: 0;
+  }
 }
