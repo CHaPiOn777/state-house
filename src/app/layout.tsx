@@ -14,7 +14,8 @@ const nunitoSans = Nunito_Sans({
 export const metadata: Metadata = {
   title:
     "State House - Строительство и продажа каркасных домов в Москве и московской области",
-  description: "Строительство и продажа каркасных домов",
+  description:
+    "State House - Строительство и продажа каркасных домов в Москве и московской области",
   keywords:
     "state-house, каркасные дома, строительство домов, построить дом в Москве",
 };
