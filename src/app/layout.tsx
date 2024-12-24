@@ -12,7 +12,8 @@ const nunitoSans = Nunito_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Строительство и продажа каркасных домов",
+  title:
+    "фывфы фыв йцкдльпждьррк ьsd;lfmsd;lgm; wm sdlkgmmskdgm ;;ds,f ;lwe,t;lwmm gl",
   description: "Строительство и продажа каркасных домов",
   keywords:
     "state-house, каркасные дома, строительство домов, построить дом в Москве",
@@ -25,6 +26,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ru">
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="32x32" />
+      </head>
       <body className={clsx(nunitoSans.className, styles.body)}>
         <Header />
         {children}
