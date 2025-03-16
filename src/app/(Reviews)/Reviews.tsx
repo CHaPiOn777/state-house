@@ -12,6 +12,8 @@ import denis from "../../img/reviews/denis.png";
 import Quotes from "@/img/icons/quotes";
 import AvatarName from "@/ui/avatarName/AvatarName";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { Mousewheel } from "swiper/modules";
+
 import useWindowSize from "@/hooks/useWindowSize";
 const Reviews = () => {
   const { width } = useWindowSize();
@@ -82,6 +84,18 @@ const Reviews = () => {
         // className={styles.list}
         grabCursor={true}
         className={styles.swiper}
+        modules={[Mousewheel]}
+        simulateTouch={true}
+        touchStartPreventDefault={false}
+        threshold={5}
+        passiveListeners={true}
+        mousewheel={{ forceToAxis: true, sensitivity: 1 }}
+        onWheel={(e) => {
+          if (e.deltaY !== 0) {
+            e.stopPropagation();
+            e.preventDefault();
+          }
+        }}
       >
         {data.map(({ text, name, date, avatar }, index) => (
           <SwiperSlide

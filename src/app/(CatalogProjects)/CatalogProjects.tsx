@@ -12,7 +12,7 @@ import house4 from "../../img/projects/10.jpeg";
 import house1 from "../../img/projects/20.jpeg";
 import house2 from "../../img/projects/30.jpeg";
 import ProjectCard from "@/app/(CatalogProjects)/_components/ProjectCard";
-import { Pagination } from "swiper/modules";
+import { Mousewheel, Navigation, Pagination } from "swiper/modules";
 import useWindowSize from "@/hooks/useWindowSize";
 const CatalogProjects = () => {
   const projects = [
@@ -78,8 +78,20 @@ const CatalogProjects = () => {
           width === "large" ? 20 : width === "small" ? 0 : -20
         }
         grabCursor={true}
-        modules={[Pagination]}
+        modules={[Pagination, Navigation, Mousewheel]}
         pagination={{ clickable: true }}
+        navigation
+        simulateTouch={true}
+        touchStartPreventDefault={false}
+        threshold={5}
+        passiveListeners={true}
+        mousewheel={{ forceToAxis: true, sensitivity: 1 }}
+        onWheel={(e) => {
+          if (e.deltaY !== 0) {
+            e.stopPropagation();
+            e.preventDefault();
+          }
+        }}
       >
         {projects.map(
           ({ title, img, price, square, floors, bedrooms }, index) => (
