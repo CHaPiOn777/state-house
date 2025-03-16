@@ -132,6 +132,6 @@
     align-items: flex-start;
   }
   .button > button {
-    width: calc(100vw - 100px) !important;
+    width: calc(100vw - 75px) !important;
   }
 }
